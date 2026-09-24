@@ -1,4 +1,3 @@
-```bash
 #!/usr/bin/env bash
 
 set -u
@@ -434,4 +433,3 @@ echo "Secret:"
 echo "  docker exec ${CONTAINER_NAME} cat /data/secret"
 echo
 echo "============================================================"
-```
