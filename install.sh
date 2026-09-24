@@ -123,7 +123,7 @@ success "Скрипт запущен от root"
 step "Настройка домена"
 
 while true; do
-    read -r -p "$(printf "${CYAN}Введите domain${RESET} (например proxy.example.com): ")" TPROXY_HOSTNAME
+    read -r -p "$(printf "${CYAN}Введите domain${RESET} (например proxy.example.com): ")" TPROXY_HOSTNAME < /dev/tty
 
     TPROXY_HOSTNAME="$(printf '%s' "$TPROXY_HOSTNAME" \
         | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
@@ -141,7 +141,7 @@ success "Domain: ${TPROXY_HOSTNAME}"
 step "Настройка Let's Encrypt"
 
 while true; do
-    read -r -p "$(printf "${CYAN}Введите email для Let's Encrypt${RESET} (например admin@example.com): ")" TPROXY_ACME_EMAIL
+    read -r -p "$(printf "${CYAN}Введите email для Let's Encrypt${RESET} (например admin@example.com): ")" TPROXY_ACME_EMAIL < /dev/tty
 
     TPROXY_ACME_EMAIL="$(printf '%s' "$TPROXY_ACME_EMAIL" \
         | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')"
